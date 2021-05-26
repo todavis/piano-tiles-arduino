@@ -258,23 +258,7 @@ void loop() { // execution loop of the game
             note_time = millis();
             while(millis() - note_time < hit_time){ //while a note is in the hit box
               *pressButton = getPress(pressButton);
-              /*
-              if (analogRead(BUTTON_1)>500){ //read button values
-                 pressButton[0] = 1;
-                 //Serial.print(1);
-              }
-              if (analogRead(BUTTON_2)>500){
-                 pressButton[1] = 1;
-                 //Serial.print(2);
-              }
-              if (analogRead(BUTTON_3)>500){
-                  pressButton[2] = 1;
-                  //Serial.print(3);
-              }
-              if (analogRead(BUTTON_4)>500){
-                  pressButton[3] = 1;
-                  //Serial.print(4);
-              }*/
+
               //break if an incorrect button pressed
               if (correctButton[0] == 0 and pressButton[0] == 1){
                   wrong = true;
